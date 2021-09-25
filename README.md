@@ -1,6 +1,5 @@
 
 # Stock Analysis Using VBA | Overview of Refactoring Code
-
 I was originally asked to do an analysis of stock performance for Steve, a recent college finance graduate who wants to help his parents make sound stock investments. Using VBA to write macros, I performed an audit of stock data of a set of 12 stocks over 2017 and 2018. 
 
 After the initial analysis was completed, Steve asked me to expand the analysis to include the entire stock market. I refactored the code to see if I could make it more efficient, so analyzing a larger data set would run quicker.
@@ -13,23 +12,20 @@ Steve's parents invested solely in DQ stock, and he was correct in being concern
 Another aspect of this analysis was refactoring code and understanding the benefits and determents to doing so. What I discovered after refactoring the code, is that while the time of the scripts varied on each run, the refactored code ran faster than the original code for both 2017 and 2018 in every case. The screenshots below, show those results. 
 
 
-**2017 Original Runtime** 
+**2017 Original Runtime**   **vs**    **2017 Refactored Runtime**
 
-![2017 Original Runtime](https://github.com/jmmadson/stock-analysis/blob/main/Resources/Original_2017RunTime.png)
+![2017 Original Runtime](https://github.com/jmmadson/stock-analysis/blob/main/Resources/Original_2017RunTime.png)      ![2017 Refactored Runtime](https://github.com/jmmadson/stock-analysis/blob/main/Resources/VBA_Challenge_2017.png)
 
-**2017 Refactored Runtime**
 
-![2017 Refactored Runtime](https://github.com/jmmadson/stock-analysis/blob/main/Resources/VBA_Challenge_2017.png)
+**2018 Original Runtime**   **vs**    **2018 Refactored Runtime** 
 
-**2018 Original Runtime**
+![2018 Original Runtime](https://github.com/jmmadson/stock-analysis/blob/main/Resources/OriginalScript_2018Runtime.png)   ![2018 Refactored Runtime](https://github.com/jmmadson/stock-analysis/blob/main/Resources/VBA_Challenge_2018.png)
 
-![2018 Original Runtime](https://github.com/jmmadson/stock-analysis/blob/main/Resources/OriginalScript_2018Runtime.png)
+The difference in time it took to run the macro, was due to the difference in how we looped through and stored the data. In our refactored code, we looped through the data set one time and stored our data in arrays. Th screenshot below shows the arrays we are saving our data in:
 
-**2018 Refactored Runtime** 
+![Refactored Code Arrays](https://github.com/jmmadson/stock-analysis/blob/main/Resources/RefactoredCode.png)
 
-![2018 Refactored Runtime](https://github.com/jmmadson/stock-analysis/blob/main/Resources/VBA_Challenge_2018.png)
-
-The difference in time it took to run the macro, was due to the difference in how we looped through and stored the data. In our refactored code, we looped through the data set one time and stored our data in arrays. This was more efficient than the [Original Code](https://github.com/jmmadson/stock-analysis/blob/main/Resources/Original_VBA_Analysis_Script.txt). 
+This was more efficient than the methods used in my [Original Code](https://github.com/jmmadson/stock-analysis/blob/main/Resources/Original_VBA_Analysis_Script.txt). 
 
 While the time to run the macro was only slightly faster in the refactored code, that time will make a significant difference when analyzing a much larger data set, such as all stock data. 
 
